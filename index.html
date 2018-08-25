@@ -1,380 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-	<!-- Required meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
-    <title>Socios</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<title>Página Principal</title>
 </head>
 <body>
 
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="index.html">Inicio</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="Socios.html">Socios</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Especialistas.html">Especialistas</a>
+				</li>
+				<li class="nav-item dropdown">
+        			<a class="nav-link dropdown-toggle" href="Consultas.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultas</a>
+        			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        				<a class="dropdown-item" href="Consultas.html">Consultas</a>
+        				<a class="dropdown-item" href="Expedientes.html">Expedientes</a>
+        			</div>
+        		</li>
+			</ul>
+		</div>
+	</nav>
 
 	<div class="container">
-		<!-- Encabezado -->
-		<h1 class="text-center">Socios</h1>
-    	<hr>
-
-		<!-- <div class="row justify-content-lg-end">
-			<form class="form-inline">
-				<div class="form-group align-content-center">
-					Botón Modal
-					<input class="btn btn-primary mb-2 mr-sm-2 btn-block" type="button" data-toggle="modal" data-target="#AgregarSocio" value="Agregar Socios">
-					<input class="form-control mb-2 mr-sm-2 btn-block" type="search" placeholder="Buscar" aria-label="Buscar">
-      				<button class="btn btn-outline-success mb-3 mr-sm-2 btn-block" type="submit">Buscar</button>
-				</div>
-			</form>
-		</div> -->
-
-		<div class="row align-content-end">
-			<!-- Form/Button de Agregar Socio -->
-			<div class="col-sm-12 col-md-3 offset-md-4 col-lg-3 offset-lg-4 col-xl-2 offset-xl-6">
-				<form>
-					<div class="form-group">
-						<input class="btn btn-primary btn-block" type="button" data-toggle="modal" data-target="#AgregarSocio" value="Agregar Socios">
-					</div>
-				</form>
-			</div>
-			<!-- Formulario de Buscar -->
-			<div class="col-sm-12 col-md-3 col-lg-3 col-xl-2">
-				<form>
-					<div class="form-group">
-						<input class="form-control btn-block" type="search" placeholder="Buscar" aria-label="Buscar">
-					</div>
-				</form>
-			</div>
-			<!-- Botón de Buscar -->
-			<div class="col-sm-12 col-md-2 col-lg-2 col-xl-2">
-				<form>
-					<div class="form-group">
-						<button class="btn btn-outline-success btn-block" type="submit">Buscar</button>
-					</div>
-				</form>
-			</div>
-		</div>
-		
-
-		<!-- Tabla de datos -->
-		<div class="row">
-			<div class="table-responsive">
-				<table class="table table-striped table-bordered text-center">
-					<!-- Encabezado -->
-					<thead>
-						<tr>
-							<!-- Elementos del encabezado de la tabla -->
-							<th>No Membresia</th>
-							<th>Titular</th>
-			    			<th>Cobertura</th>
-			    			<th>Detalles</th>
-						</tr>
-					</thead>
-
-					<!-- Cuerpo de los datos de la tabla -->
-					<tbody>
-						<tr>
-
-			    			<td>001</td>
-			    			<td>Felipe Zamora Fuentes</td>
-			    			<td>Amplio</td>
-			    			<td>
-			    				<input class="btn btn-success" type="button" value="Ver">
-			    			</td>
-			   			</tr>
-
-			    		<tr>
-			    			<td>002</td>
-			   				<td>Itzel Silva Contreras</td>
-			   				<td>Minima</td>
-			   				<td>
-			   					<input class="btn btn-success" type="button" value="Ver">
-		    				</td>
-			    		</tr>
-
-			    		<tr>
-			   				<td>003</td>
-			   				<td>Stephania Fletes Gonzales</td>
-			   				<td>Amplio</td>
-			   				<td>
-		    					<input class="btn btn-success" type="button" value="Ver">
-		    				</td>
-		    			</tr>
-							
-						<tr>
-							<td>004</td>
-							<td>Juan Perez Vaca</td>
-							<td>Amplio</td>
-							<td>
-								<input class="btn btn-success" type="button" value="Ver">
-							</td>
-						</tr>
-					</tbody>
-
-				</table>
-
-			</div> <!-- Fin de table responsible -->
-
-		</div> <!-- Fin de Row -->
-
-    </div> <!-- Fin de container -->
-
-
-	<!-- Modal -->
-	<div class="modal fade" id="AgregarSocio" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Agregar Socio</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<!-- Contenido interno del Modal -->
-
-					<div class="container">
-
-						<div class="row">
-							<!-- Colocar imagen en esta fila -->
-							<div class="col-12">
-								<form>
-									<div class="form-group row">
-										<label class="col-form-label col-sm-12 col-md-12 col-lg-2 col-xl-2">Nombre</label>
-										<input type="text" class="form-control col-sm-12 col-md-0 col-lg-10 col-xl-10" placeholder="Nombre Socio">
-									</div>
-								</form>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-12">
-								<form>
-									<div class="form-group row">
-										<label class="col-form-label col-sm-12 col-md-12 col-lg-2 col-xl-2">Parentesco</label>
-										<select class="custom-select col-sm-12 col-md-0 col-lg-10 col-xl-10">
-											<option selected>Seleccione Parentesco</option>
-											<option value="1">One</option>
-											<option value="2">Two</option>
-											<option value="3">Three</option>
-										</select>
-									</div>
-								</form>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-12">
-								<form>
-									<div class="form-group row">
-										<label class="col-form-label col-sm-12 col-md-12 col-lg-2 col-xl-2">Ocupación</label>
-										<input type="text" class="form-control col-sm-12 col-md-0 col-lg-10 col-xl-10" placeholder="Ocupación">
-									</div>
-								</form>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-12">
-								<form>
-									<div class="form-group row">
-										<label class="col-form-label col-sm-12 col-md-12 col-lg-2 col-xl-2">Estado Civil</label>
-										<select class="custom-select col-sm-12 col-md-0 col-lg-10 col-xl-10">
-											<option selected>Seleccione Estado Civil</option>
-											<option value="1">Soltero/a</option>
-											<option value="2">Casado/a</option>
-											<option value="3">Divorciado/a</option>
-											<option value="4">Vuido/a</option>
-											<option value="5">Union libre</option>
-										</select>
-									</div>
-								</form>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-								<form>
-									<div class="form-group row">
-										<label class="col-form-label col-sm-12 col-md-12 col-lg-2 col-xl-2">Sexo</label>
-										<select class="custom-select col-sm-12 col-md-12 col-lg-8 col-xl-8">
-											<option value="1">Hombre</option>
-											<option value="2">Mujer</option>
-										</select>
-									</div>
-								</form>
-							</div>
-							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
-								<form>
-									<div class="form-group row">
-										<label class="col-form-label col-sm-12 col-md-12 col-lg-6 col-xl-6">Fecha de nacimiento</label>
-										<input type="text" class="form-control col-sm-12 col-md-12 col-lg-6 col-xl-6" placeholder="DD-MM-AAAA">
-									</div>
-								</form>
-							</div>
-						</div>
-
-						<h5>Domicilio</h5>
-						<hr>
-
-						<div class="row">
-							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-								<form>
-									<div class="form-group row">
-										<label class="col-form-label col-sm-12 col-md-12 col-lg-4 col-xl-4">Dirección</label>
-										<input type="text" class="form-control col-sm-12 col-md-12 col-lg-8 col-xl-8" placeholder="Dirección">
-									</div>
-								</form>
-							</div>
-							
-							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-								<form>
-									<div class="form-group row">
-										<label class="col-form-label col-sm-12 col-md-12 col-lg-4 col-xl-4">Colonia</label>
-										<input type="text" class="form-control col-sm-12 col-md-12 col-lg-8 col-xl-8" placeholder="Colonia">
-									</div>
-								</form>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-								<form>
-									<div class="form-group row">
-										<label class="col-form-label col-sm-12 col-md-12 col-lg-4 col-xl-4">Municipio</label>
-										<input type="text" class="form-control col-sm-12 col-md-12 col-lg-8 col-xl-8" placeholder="Municipio">
-									</div>
-								</form>
-							</div>
-							
-							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-								<form>
-									<div class="form-group row">
-										<label class="col-form-label col-sm-12 col-md-12 col-lg-4 col-xl-4">Estado</label>
-										<input type="text" class="form-control col-sm-12 col-md-12 col-lg-8 col-xl-8" placeholder="Estado">
-									</div>
-								</form>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-								<form>
-									<div class="form-group row">
-										<label class="col-form-label col-sm-12 col-md-12 col-lg-4 col-xl-4">País</label>
-										<input type="text" class="form-control col-sm-12 col-md-12 col-lg-8 col-xl-8" placeholder="País">
-									</div>
-								</form>
-							</div>
-							
-							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-								<form>
-									<div class="form-group row">
-										<label class="col-form-label col-sm-12 col-md-12 col-lg-4 col-xl-4">C.P.</label>
-										<input type="text" class="form-control col-sm-12 col-md-12 col-lg-8 col-xl-8" placeholder="C.P.">
-									</div>
-								</form>
-							</div>
-						</div>
-
-
-						<h5>Contacto</h5>
-						<hr>
-
-						<div class="row">
-							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-								<form>
-									<div class="form-group row">
-										<label class="col-form-label col-sm-12 col-md-12 col-lg-4 col-xl-4">Télefono</label>
-										<input type="text" class="form-control col-sm-12 col-md-12 col-lg-8 col-xl-8" placeholder="Télefono">
-									</div>
-								</form>
-							</div>
-							
-							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-								<form>
-									<div class="form-group row">
-										<label class="col-form-label col-sm-12 col-md-12 col-lg-4 col-xl-4">email</label>
-										<input type="text" class="form-control col-sm-12 col-md-12 col-lg-8 col-xl-8" placeholder="email">
-									</div>
-								</form>
-							</div>
-						</div>
-
-						<h5>Asociados</h5>
-						<hr>
-
-						<div class="row">
-							<div class="col-12">
-								<form class="form-group row">
-									<input type="button" class="btn btn-primary btn-block col-4 offset-8" value="Agregar Asociado">
-								</form>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-12">
-								<div class="table-responsive">
-									<table class="table table-striped table-bordered text-center">
-									<!-- Encabezado -->
-									<thead>
-										<tr>
-											<!-- Elementos del encabezado de la tabla -->
-											<th>No Membresia</th>
-											<th>Asociado</th>
-							    			<th>Detalles</th>
-										</tr>
-									</thead>
-
-									<!-- Cuerpo de los datos de la tabla -->
-									<tbody>
-										<tr>
-							    			<td></td>
-							    			<td></td>
-							    			<td></td>
-							   			</tr>
-
-							    		<tr>
-							    			<td></td>
-							   				<td></td>
-							   				<td></td>
-							    		</tr>
-
-							    		<tr>
-							   				<td></td>
-							   				<td></td>
-							   				<td></td>
-						    			</tr>
-											
-									</tbody>
-
-								</table>
-
-								</div>
-
-							</div>
-
-						</div>
-
-					</div>	<!-- Fin del container del Model -->
-
-
-
-		
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-					<button type="button" class="btn btn-primary">Agregar Socio</button>
-				</div>
-			</div>
-		</div>
+			<h1 class="h1 text-center">Aquí no hay nada :v</h1>
 	</div>
 
-	<!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	
 </body>
 </html>
