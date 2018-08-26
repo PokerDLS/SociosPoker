@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
+	<!-- Required meta tags -->
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">﻿
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-   
-	<title>Especialistas</title>
-	
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
+    <title>Especialistas</title>
 </head>
-
 <body>
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -25,7 +23,7 @@
 					<a class="nav-link" href="Socios.html">Socios</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="Especialistas.html">Especialistas</a>
+					<a class="nav-link active" href="Especialistas.html">Especialistas</a>
 				</li>
 				<li class="nav-item dropdown">
         			<a class="nav-link dropdown-toggle" href="Consultas.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultas</a>
@@ -37,322 +35,289 @@
 			</ul>
 		</div>
 	</nav>
+
+
+	<div class="container">
+		<!-- Encabezado -->
+		<h1 class="text-center">Especialistas</h1>
+    	<hr>
+
+		<div class="row align-content-end">
+			<!-- Form/Button de Agregar Socio -->
+			<div class="col-sm-12 col-md-3 offset-md-4 col-lg-3 offset-lg-4 col-xl-2 offset-xl-6">
+				<form>
+					<div class="form-group">
+						<input class="btn btn-primary btn-block" type="button" data-toggle="modal" data-target="#AgregarMedico" value="Agregar Médico">
+					</div>
+				</form>
+			</div>
+			<!-- Formulario de Buscar -->
+			<div class="col-sm-12 col-md-3 col-lg-3 col-xl-2">
+				<form>
+					<div class="form-group">
+						<input class="form-control btn-block" type="search" placeholder="Buscar" aria-label="Buscar">
+					</div>
+				</form>
+			</div>
+			<!-- Botón de Buscar -->
+			<div class="col-sm-12 col-md-2 col-lg-2 col-xl-2">
+				<form>
+					<div class="form-group">
+						<button class="btn btn-outline-success btn-block" type="submit">Buscar</button>
+					</div>
+				</form>
+			</div>
+		</div>
 		
 
-			<div class="container">
-			<h1 class="text-center">Especialistas</h1>
-			<hr>
+		<!-- Tabla de datos -->
+		<div class="row">
+			<div class="table-responsive">
+				<table class="table table-striped table-bordered text-center">
+					<!-- Encabezado -->
+					<thead>
+						<tr>
+							<!-- Elementos del encabezado de la tabla -->
+							<th>ID</th>
+							<th>Médico</th>
+			    			<th>Especialista</th>
+			    			<th>Detalles</th>
+						</tr>
+					</thead>
 
-			<div class="row">
-				<div class="col-lg-7"></div>
-				<div class="col-lg-2">
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Agregar Medico</button>
+					<!-- Cuerpo de los datos de la tabla -->
+					<tbody>
+						<tr>
+
+			    			<td>001</td>
+			    			<td>Felipe Zamora Fuentes</td>
+			    			<td>Cardiologia</td>
+			    			<td>
+			    				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#VerEspec">Ver</button>
+			    			</td>
+			   			</tr>
+
+			    		<tr>
+			    			<td>002</td>
+			   				<td>Itzel Silva Contreras</td>
+			   				<td>Neurologia</td>
+			   				<td>
+			   					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#VerEspec">Ver</button>
+		    				</td>
+			    		</tr>
+
+			    		<tr>
+			   				<td>003</td>
+			   				<td>Stephania Fletes Gonzales</td>
+			   				<td>General</td>
+			   				<td>
+		    					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#VerEspec">Ver</button>
+		    				</td>
+		    			</tr>
+							
+						<tr>
+							<td>004</td>
+							<td>Juan Perez Vaca</td>
+							<td>Cardiologo</td>
+							<td>
+								<button type="button" class="btn btn-success" data-toggle="modal" data-target="#VerEspec">Ver</button>
+							</td>
+						</tr>
+					</tbody>
+
+				</table>
+
+			</div> <!-- Fin de table responsible -->
+
+		</div> <!-- Fin de Row -->
+
+    </div> <!-- Fin de container -->
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="AgregarMedico" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Agregar Especialista</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!-- Contenido interno del Modal -->
+
+					<div class="container">
+
+						<div class="row">
+							<!-- Colocar imagen en esta fila -->
+							<div class="col-12">
+								<form>
+									<div class="form-group row">
+										<label class="col-form-label col-sm-12 col-md-12 col-lg-2 col-xl-2">Nombre</label>
+										<input type="text" class="form-control col-sm-12 col-md-0 col-lg-10 col-xl-10" placeholder="Nombre Médico">
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-12">
+								<form>
+									<div class="form-group row">
+										<label class="col-form-label col-sm-12 col-md-12 col-lg-2 col-xl-2">Cedula</label>
+										<input type="text" class="form-control col-sm-12 col-md-0 col-lg-10 col-xl-10" placeholder="Cedula Profecional">
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<h5>Datos Personales</h5>
+						<hr>
+
+						<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+								<form>
+									<div class="form-group row">
+										<label class="col-form-label col-sm-12 col-md-12 col-lg-4 col-xl-4">Dirección</label>
+										<input type="text" class="form-control col-sm-12 col-md-12 col-lg-8 col-xl-8" placeholder="Dirección">
+									</div>
+								</form>
+							</div>
+							
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+								<form>
+									<div class="form-group row">
+										<label class="col-form-label col-sm-12 col-md-12 col-lg-4 col-xl-4">Colonia</label>
+										<input type="text" class="form-control col-sm-12 col-md-12 col-lg-8 col-xl-8" placeholder="Colonia">
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+								<form>
+									<div class="form-group row">
+										<label class="col-form-label col-sm-12 col-md-12 col-lg-4 col-xl-4">Municipio</label>
+										<input type="text" class="form-control col-sm-12 col-md-12 col-lg-8 col-xl-8" placeholder="Municipio">
+									</div>
+								</form>
+							</div>
+							
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+								<form>
+									<div class="form-group row">
+										<label class="col-form-label col-sm-12 col-md-12 col-lg-4 col-xl-4">Estado</label>
+										<input type="text" class="form-control col-sm-12 col-md-12 col-lg-8 col-xl-8" placeholder="Estado">
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+								<form>
+									<div class="form-group row">
+										<label class="col-form-label col-sm-12 col-md-12 col-lg-4 col-xl-4">País</label>
+										<input type="text" class="form-control col-sm-12 col-md-12 col-lg-8 col-xl-8" placeholder="País">
+									</div>
+								</form>
+							</div>
+							
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+								<form>
+									<div class="form-group row">
+										<label class="col-form-label col-sm-12 col-md-12 col-lg-4 col-xl-4">C.P.</label>
+										<input type="text" class="form-control col-sm-12 col-md-12 col-lg-8 col-xl-8" placeholder="C.P.">
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+								<form>
+									<div class="form-group row">
+										<label class="col-form-label col-sm-12 col-md-12 col-lg-4 col-xl-4">Télefono</label>
+										<input type="text" class="form-control col-sm-12 col-md-12 col-lg-8 col-xl-8" placeholder="Télefono">
+									</div>
+								</form>
+							</div>
+							
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+								<form>
+									<div class="form-group row">
+										<label class="col-form-label col-sm-12 col-md-12 col-lg-4 col-xl-4">E-mail</label>
+										<input type="text" class="form-control col-sm-12 col-md-12 col-lg-8 col-xl-8" placeholder="E-mail">
+									</div>
+								</form>
+							</div>
+						</div>
+
+					</div>	<!-- Fin del container del Model -->
+
 				</div>
 
-				<div class="col-lg-3">
-					<input class="form-control" type="text" placeholder="Especialidad, Nombre">
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+					<button type="button" class="btn btn-primary">Agregar Médico</button>
 				</div>
 			</div>
-			<!--tabla-->
-			<table class="table table-striped text-center">
-    		<thead>
-    			<tr>
-    				<th>ID</th>
-    				<th>Médico</th>
-    				<th>Especialidad</th>
-    				<th>Detalles</th>
-    			</tr>
+		</div>
+	</div>
 
-    		</thead>
-    		<tbody>
-    			<tr>
-    				<td>001</td>
-    				<td>Rodrigo Perez Gonzalez</td>
-    				<td>Cardiologia</td>
-    				<td>
-    					<button class="btn btn-success"data-toggle="modal" data-target=".bd-example-modal-lg2">Ver</button>
-    				</td>
-    			</tr>
 
-    			<tr>
-    				<td>002</td>
-    				<td>Enrique Silva Contreras</td>
-    				<td>General</td>
-    				<td>
-    					<button class="btn btn-success"data-toggle="modal" data-target=".bd-example-modal-lg2">Ver</button>
-    				</td>
-    			</tr>
-
-    			<tr>
-    				<td>003</td>
-    				<td>Meredith Grey Sloan</td>
-    				<td>Neurología</td>
-    				<td>
-    					<button class="btn btn-success"data-toggle="modal" data-target=".bd-example-modal-lg2">Ver</button>
-    				</td>
-    			</tr>
-				
-				<tr>
-					<td>004</td>
-					<td>Cristina Rincon Vaca</td>
-					<td>Cardiología</td>
-					<td>
-						<button class="btn btn-success"data-toggle="modal" data-target=".bd-example-modal-lg2">Ver</button>
-					</td>
-				</tr>
-
-    		</tbody>
-    	</table>
-    	</div>
-
-		<!-- Modal -->
-			<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-			  <div class="modal-dialog modal-lg">
-			    <div class="modal-content">
+	<!-- Modal para VerSocio -->
+	<div class="modal fade" id="VerEspec" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
 					
-		      	   <div class="modal-header">
-		        <h5 class="modal-title" id="exampleModalLongTitle">Agregar Medico</h5>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
-		          <span aria-hidden="true">&times;</span>
-		        </button>
-		      </div>	
-		      
-		      <div class="modal-body">
-		      	
-		      	<div class="row">
-   	 				<div class="col-lg-2">
-     				 <label class="form">Nombre: </label>
-				    </div>
-				    <div class="col-lg-6">
-				     <input class="form-control" type="text" name="Nombre">
-				    </div>
-				    <div class="col-lg-4">
-				    <img src="..." alt="..." class="img-thumbnail">
-				    <br>
-				    <button type="button" class="btn btn-link">Subir imagen</button>
-				    </div>
-				  </div>
-
-				  <div class="row">
-   	 				<div class="col-lg-3">
-     				 <label class="form">Cédula Profecional: </label>
-				    </div>
-				    <div class="col-lg-4">
-				     <input class="form-control" type="text" name="Cedula">
-				    </div>
-				   
-				  </div>
-				  <br>
-
-				  <div class="row">
-   	 				<div class="col-lg-3">
-   	 					<input type="checkbox" value="Especilidad: ">
-     				 <label class="form">Especialidad: </label>
-				    </div>
-				    <div class="col-lg-3">
-				     <select id="select" >
-				     	<option value=> - Seleccione Especialidad - </option>
-				     	<option value>Cardiología</option>
-				     	<option value>Neurología</option>
-				     	
-				     </select>
-				    </div>
-				   
-				  </div>
-		      </div>
-		      <div class="modal-header">
-		      <h5 >Datos Personales</h5>
-		      <br>
-		 	  </div>
-		      <div class="modal-body">
-		      	<div class="row">
-   	 				<div class="col-lg-2">
-     				 <label class="form">Direccion: </label>
-				    </div>
-				    <div class="col-lg-4">
-				     <input class="form-control" type="text" name="Sexo">
-				    </div>
-				    <div class="col-lg-2">
-     				 <label class="form">Colonia:  </label>
-				    </div>
-				    <div class="col-lg-4">
-				     <input class="form-control" type="text" name="FechaNa">
-				    </div>
+					<!-- Contenido del modal -->
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-4 bg-info">
+								<label>Espacio para imagen</label>
+							</div>
+							<div class="col-8">
+								<p class="">Nombre: Felipe Zamora Fuentes</p>
+								<div class="row">
+									<div class="col-6">
+										<p class="">Cobertura: Amplia</p>
+									</div>
+									<div class="col-6">
+										<p class="">Status: Activo</p>
+									</div>
+								</div>
+								<p class="">Socio desde: 24/06/2017</p>
+								<div class="">
+									<a href="">Borrar</a>
+									<a href="">Editar</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				    <br>
-
-				    <div class="row">
-   	 				<div class="col-lg-2">
-     				 <label class="form">Municipio: </label>
-				    </div>
-				    <div class="col-lg-4">
-				     <input class="form-control" type="text" name="Municipio">
-				    </div>
-				    <div class="col-lg-2">
-     				 <label class="form">Estado:  </label>
-				    </div>
-				    <div class="col-lg-4">
-				     <input class="form-control" type="text" name="Estado">
-				    </div>
-				</div>
-				    <br>
-				    <div class="row">
-   	 				<div class="col-lg-2">
-     				 <label class="form">Telefono: </label>
-				    </div>
-				    <div class="col-lg-4">
-				     <input class="form-control" type="text" name="Pais">
-				    </div>
-				    <div class="col-lg-2">
-     				 <label class="form">e-mail:  </label>
-				    </div>
-				    <div class="col-lg-4">
-				     <input class="form-control" type="text" name="C.P">
-				    </div>
-				</div>
-				    <br>
-
-				 <div class="row">
-
-   	 				<div class="col-lg-1">
-				    </div>
-
-				    <div class="col-lg-10">
-		        	<button type="button" class="btn btn-primary btn-block">Guardar Médico</button>
-		        	</div>
-
-					<div class="col-lg-1">
-			    	</div>
-			    </div>
-
-    		</div>
-		      </div>
-		      </div>
-		      </div>
-
-				 <!--  modal2 -->	
-				<div class="modal fade bd-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-				  <div class="modal-dialog modal-lg">
-				    <div class="modal-content">
-
-				    	<div class="modal-body">
-		      	
-		      	<div class="row">
-		      		<div class="col-lg-3">
-				    <img src="..." alt="..." class="img-thumbnail">
-				    <br>
-				    <button type="button" class="btn btn-link">Subir imagen</button>
-				     </div>
-   	 				<div class="col-lg-6">
-     				 <h4>Médico: Cristina Gomez Rios </h4>
-				    </div>
-				  </div>
-
-				  <div class="row">
-				    <div class="col-lg-3">
-				    </div>
-   	 				<div class="col-lg-6">
-     				 <h6>Especialidad: Cardiología </h6>
-				    </div>
-				  </div>
-
-				  <div class="row">
-				    <div class="col-lg-3">
-				    </div>
-   	 				<div class="col-lg-6">
-     				 <h6>Ced. Profecional: 2562114016 </h6>
-				    </div>
-				  </div>
-
-				  <div class="row">
-				    <div class="col-lg-3">
-				    </div>
-   	 				<div class="btn-group col-lg-1" role="group" aria-label="Third group">
-    				<button type="button" class="btn btn-secondary">...</button>
-  					</div>
-  					<div class="btn-group col-lg-1" role="group" aria-label="Third group">
-    				<button type="button" class="btn btn-secondary">B</button>
-  					</div>
-  					<div class="btn-group col-lg-3" role="group" aria-label="Third group">
-    				
-    				<button class="btn btn-success"data-toggle="modal" data-target=".bd-example-modal-lg3">Agendar Cita</button>
-  					</div>
-				  </div>
-
-				  <div class="modal-header">
-				  	<h3>Datos Generales</h3>
-				  </div>
-				  <div class="modal-body">
-				  	<div class="row">
-				  		<div class="col-lg-2">
-				  			<label class="form">Derección: </label>
-				  		</div>
-				  <div class="col-lg-4">
-				  	<label class="from">Felipi Sevilla del Río #546</label>
-				  </div>
-				  <div class="col-lg-1">
-				  	<label class="form">Colonia: </label>
-				  		</div>
-				  <div class="col-lg-5">
-				  	<label class="from">Lomas de Vista Hermosa</label>
-				  </div>
-
-				  	</div>
-				  	<div class="row">
-				  		<div class="col-lg-2">
-				  		<label class="form">Municipio: </label>
-				  		</div>
-				    <div class="col-lg-3">
-				  	   <label class="from">Colima</label>
-				    </div>
-				  <div class="col-lg-1">
-				  	<label class="form">Estado: </label>
-				  </div>
-				  <div class="col-lg-3">
-				  	<label class="from">Colima</label>
-				  </div>
-				  	</div>
-
-				  	<div class="row">
-				  		<div class="col-lg-2">
-				  		<label class="form">Telefono: </label>
-				  		</div>
-				    <div class="col-lg-3">
-				  	   <label class="from">3129872509</label>
-				    </div>
-				  <div class="col-lg-">
-				  	<label class="form">e-mail:</label>
-				  </div>
-				  <div class="col-lg-3">
-				  	<label class="from">cristina.cardiolologamex@gmail.com</label>
-				  </div>
-
-				  	</div>
-
-				  </div>
-
-				    </div>
-				  </div>
+					<!-- Final del contenido del modal -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+					<button type="button" class="btn btn-primary">Agregar Médico</button>
 				</div>
 			</div>
-			<!--  modal3 -->	
-		      <div class="modal fade bd-example-modal-lg3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-				  <div class="modal-dialog modal-lg">
-				    <div class="modal-content">
-
-				    	<div class="modal-body">
-				    		
-				    	</div>
-
-				    </div>
-				  </div>
-				</div>
+		</div>
+	</div>
 
 
-<!-- scrips-->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>

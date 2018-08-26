@@ -1,22 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">﻿
-    <link rel="stylesheet" type="text/css" href="style.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-        <style type="text/css">
-    	
-	td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-	}
-    </style>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Consultas</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
+    <title>Consultas</title>
 
 </head>
 <body>
@@ -34,7 +26,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="Especialistas.html">Especialistas</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown active">
                     <a class="nav-link dropdown-toggle" href="Consultas.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultas</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="Consultas.html">Consultas</a>
@@ -45,81 +37,217 @@
         </div>
     </nav>
 
-<div class="container">
-		<h1 class="text-center">Consultas</h1>
-    	<hr>
 
-    	<div class="row">
-    		<div class="col-lg-6 col-md-6 col-sm-6"></div>
-    		<div class="col-lg-3 col-md-3 col-sm-3">
-    			<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Agregar Consulta</button>
+        <div class="container">
+        <!-- Encabezado -->
+        <h1 class="text-center">Consultas</h1>
+        <hr>
 
-    		</div>
-    		<div class="col-lg-3 col-md-3 col-sm-3">
-    			<input class="form-control" type="text" placeholder="Membresia, nombre">
-    		</div>
-    	</div>
-    	<br>
-    	<table class="table table-striped text-center">
-    		<thead>
-    			<tr>
-    				<th>No Membresia</th>
-    				<th>Paciente</th>
-    				<th>Hora</th>
-    				<th>Detalles</th>
-    			</tr>
+        <div class="row align-content-end">
+            <!-- Form/Button de Agregar Socio -->
+            <div class="col-sm-12 col-md-3 offset-md-4 col-lg-3 offset-lg-4 col-xl-2 offset-xl-6">
+                <form>
+                    <div class="form-group">
+                        <input class="btn btn-primary btn-block" type="button" data-toggle="modal" data-target="#VerConsulta" value="Agregar Consulta">
+                    </div>
+                </form>
+            </div>
+            <!-- Formulario de Buscar -->
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                <form>
+                    <div class="form-group">
+                        <input class="form-control btn-block" type="search" placeholder="Buscar" aria-label="Buscar">
+                    </div>
+                </form>
+            </div>
+            <!-- Botón de Buscar -->
+            <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2">
+                <form>
+                    <div class="form-group">
+                        <button class="btn btn-outline-success btn-block" type="submit">Buscar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
-    		</thead>
-    		<tbody>
-    			<tr>
-    				<td>001</td>
-    				<td>Felipe Zamora Fuentes</td>
-    				<td>9:00 a.m</td>
-    				<td>
-    					<button class="btn btn-success"data-toggle="modal" data-target=".bd-example-modal-lg1">Ver</button>
-    					<button class="btn btn-danger"data-toggle="modal" data-target=".bd-example-modal-lg1">Borrar</button>
-    				</td>
-    			</tr>
+            <!-- Tabla de datos -->
+            <div class="row">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered text-center">
+                        <!-- Encabezado -->
+                        <thead>
+                            <tr>
+                                <!-- Elementos del encabezado de la tabla -->
+                                <th>No Membresia</th>
+                                <th>Paciente</th>
+                                <th>Hora</th>
+                                <th>Detalles</th>
+                            </tr>
+                        </thead>
 
-    			<tr>
-    				<td>002</td>
-    				<td>Itzel Silva Contreras</td>
-    				<td>10:30 a.m</td>
-    				<td>
-    					<button class="btn btn-success"data-toggle="modal" data-target=".bd-example-modal-lg1">Ver</button>
-    					<button class="btn btn-danger"data-toggle="modal" data-target=".bd-example-modal-lg1">Borrar</button>
-    				</td>
-    			</tr>
+                        <!-- Cuerpo de los datos de la tabla -->
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>Felipe Zamora Fuentes</td>
+                                <td>9:00 a.m</td>
+                                <td>
+                                    <button class="btn btn-success"data-toggle="modal" data-target="">Ver</button>
+                                    <button class="btn btn-danger"data-toggle="modal" data-target="">Borrar</button>
+                                </td>
+                            </tr>
 
-    			<tr>
-    				<td>003</td>
-    				<td>Stephania Fletes Gonzales</td>
-    				<td>11:00 a.m</td>
-    				<td>
-    					<button class="btn btn-success"data-toggle="modal" data-target=".bd-example-modal-lg1">Ver</button>
-    					<button class="btn btn-danger"data-toggle="modal" data-target=".bd-example-modal-lg1">Borrar</button>
-    				</td>
-    			</tr>
-				
-				<tr>
-					<td>004</td>
-					<td>Juan Perez Vaca</td>
-					<td>12:00 p.m</td>
-					<td>
-						<button class="btn btn-success"data-toggle="modal" data-target=".bd-example-modal-lg1">Ver</button>
-						<button class="btn btn-danger"data-toggle="modal" data-target=".bd-example-modal-lg1">Borrar</button>
-					</td>
-				</tr>
+                            <tr>
+                                <td>002</td>
+                                <td>Itzel Silva Contreras</td>
+                                <td>Minima</td>
+                                <td>
+                                    <button class="btn btn-success"data-toggle="modal" data-target="">Ver</button>
+                                    <button class="btn btn-danger"data-toggle="modal" data-target="">Borrar</button>
+                                </td>
+                            </tr>
 
-    		</tbody>
-    	</table>
+                            <tr>
+                                <td>003</td>
+                                <td>Stephania Fletes Gonzales</td>
+                                <td>10:30 a.m</td>
+                                <td>
+                                    <button class="btn btn-success"data-toggle="modal" data-target="">Ver</button>
+                                    <button class="btn btn-danger"data-toggle="modal" data-target="">Borrar</button>
+                                </td>
+                            </tr>
+                                
+                            <tr>
+                                <td>004</td>
+                                <td>Juan Perez Vaca</td>
+                                <td>12:00 p.m</td>
+                                <td>
+                                    <button class="btn btn-success"data-toggle="modal" data-target="">Ver</button>
+                                    <button class="btn btn-danger"data-toggle="modal" data-target="">Borrar</button>
+                                </td>
+                            </tr>
+                        </tbody>
 
+                    </table>
+
+                </div> <!-- Fin de table responsible -->
+
+            </div> <!-- Fin de Row -->
+
+        </div>
+
+        <!--  modal --> 
+        <div class="modal fade" id="VerConsulta" tabindex="-1" role="dialog" aria-labelledby="VerConsulta" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+
+                    <div class="row">
+                    <div class="modal-body">
+                    <input type="date">
+                    </div>
+                    <div class="col-lg-3">
+                     <br>
+                     <h6>Especialidad:  </h6>
+                    </div>
+                    <div class="col-lg-4">
+                     <br><select id="select" >
+                        <option value=> - Seleccione - </option>
+                        <option value>Cardiología</option>
+                        <option value>Neurología</option>
+                     </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="modal-body">
+                    </div>
+                    <div class="col-lg-3">
+                     <br>
+                     <h6>Medico:  </h6>
+                    </div>
+                    <div class="col-lg-4">
+                     <br><select id="select" >
+                        <option value=> - Seleccione - </option>
+                        <option value>Meredith</option>
+                        <option value>Cristina</option>
+                     </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="modal-body">
+                    </div>
+                    <div class="col-lg-3">
+                     <br>
+                     <h6>Numero de Membresia:  </h6>
+                    </div>
+                    <div class="col-lg-2">
+                     <br><input class="form-control" type="text" name="numeromem">
+                    </div>
+                    <div class="col-lg-2">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="modal-body">
+                    </div>
+                    <div class="col-lg-3">
+                     <br>
+                     <h6>Nombre del Socio:  </h6>
+                    </div>
+                    <div class="col-lg-4">
+                     <br><select id="select" >
+                        <option value=> - Seleccione - </option>
+                        <option value>Juan</option>
+                        <option value>Carlos</option>
+                     </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="modal-body">
+                    </div>
+                    <div class="col-lg-3">
+                     <br>
+                     <h6>Horario:  </h6>
+                    </div>
+                    <div class="col-lg-4">
+                     <br><select id="select" >
+                        <option value=> - Seleccione - </option>
+                        <option value>13:00</option>
+                        <option value>13:30</option>
+                     </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="modal-body">
+                    </div>
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-lg-1">
+                    </div>
+
+                    <div class="col-lg-10">
+                    <button type="button" class="btn btn-primary btn-block">Guardar Cita</button><br>
+                    </div>
+
+                    <div class="col-lg-1">
+                    </div>
+                </div>
+
+                    </div>
+                  </div>
+                </div>
     	
 
- <!-- scrips-->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 </body>
 </html>
